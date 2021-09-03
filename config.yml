@@ -1,0 +1,46 @@
+baseURL: https://carlf.io
+languageCode: en-us
+title: carlf.io
+theme: github.com/vaga/hugo-theme-m10c
+
+markup:
+  highlight:
+    guessSyntax: true
+    style: monokai
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+
+social:
+  github: https://github.com/carlf
+
+params:
+  author: Carl Flippin
+  description: I'm just as confused as the rest of you
+  avatar: avatar.png
+  social:
+    - icon: github
+      name: "My Github"
+      url: https://github.com/carlf
+    - icon: key
+      name: "My GPG Key"
+      url: https://keyoxide.org/hkp/50f1a8d452b5c094a656ce6aac084c5eec19856d
+  style:
+    darkestColor: "#2e3440"
+    darkColor: "#3b4252"
+    lightColor: "#d8dee9"
+    lightestColor: "#eceff4"
+    primaryColor: "#8fbcbb"
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+    - identifier: tag
+      name: Tags
+      url: /tags
+    - identifier: rss
+      name: RSS
+      url: /index.xml

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>carlf.io</title>
+    <link>https://carlf.io/</link>
+    <description>Recent content on carlf.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Sep 2021 12:32:39 -0700</lastBuildDate><atom:link href="https://carlf.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Refactoring Terraform with tfmigrate</title>
+      <link>https://carlf.io/posts/refactoring-terraform-with-tfmigrate/</link>
+      <pubDate>Fri, 03 Sep 2021 12:32:39 -0700</pubDate>
+      
+      <guid>https://carlf.io/posts/refactoring-terraform-with-tfmigrate/</guid>
+      <description>So you want to refactor your terraform You have some terraform. It was written in haste and you have many regrets. You would like to refactor but you worry about the state transition. If you move a resource under a different path it will not match and will require painful destroy / create cycles.
+tfmigrate The solution is tfmigrate. It allows you to write clear migrations for your state and lets you test your migrations without worrying about clobbering your existing state.</description>
+    </item>
+    
+  </channel>
+</rss>
