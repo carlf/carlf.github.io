@@ -6,7 +6,7 @@ theme: github.com/vaga/hugo-theme-m10c
 markup:
   highlight:
     guessSyntax: true
-    style: monokai
+    style: nord
   tableOfContents:
     endLevel: 3
     ordered: false
