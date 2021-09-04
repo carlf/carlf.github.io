@@ -66,11 +66,11 @@ destroy / create cycles.</p>
 you to write clear migrations for your state and lets you test your migrations
 without worrying about clobbering your existing state.</p>
 <p>Here is an example of a migration:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-hcl data-lang=hcl><span style=color:#66d9ef>migration</span> <span style=color:#e6db74>&#34;state&#34; &#34;test&#34;</span> {
-    <span style=color:#66d9ef>actions</span> [
-        <span style=color:#e6db74>&#34;mv &#39;foo&#39; &#39;bar&#39;&#34;</span>,
-        <span style=color:#e6db74>&#34;mv &#39;baz&#39; &#39;quux&#39;&#34;</span>
-    ]
+<div class=highlight><pre tabindex=0 style=color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-hcl data-lang=hcl><span style=color:#81a1c1;font-weight:700>migration</span> <span style=color:#a3be8c>&#34;state&#34; &#34;test&#34;</span> {
+    <span style=color:#81a1c1;font-weight:700>actions</span> <span style=color:#eceff4>[</span>
+        <span style=color:#a3be8c>&#34;mv &#39;foo&#39; &#39;bar&#39;&#34;</span><span style=color:#eceff4>,</span>
+        <span style=color:#a3be8c>&#34;mv &#39;baz&#39; &#39;quux&#39;&#34;</span>
+    <span style=color:#eceff4>]</span>
 }</code></pre></div>
 </div>
 <div class=post-footer>
