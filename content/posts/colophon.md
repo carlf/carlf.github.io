@@ -26,7 +26,7 @@ simpler to just download the static binary and put it somewhere in your path.
 You can verify Hugo is installed correctly with `hugo version`
 
 
-### Initial Site Generatiok {#initial-site-generatiok}
+### Initial Site Generation {#initial-site-generation}
 
 Once Hugo is installed, you want to generate a skeleton site. In my case this
 was as simple as `hugo new site carlf.github.io -f yml`. This generates a new
@@ -135,4 +135,26 @@ do the following:
 (use-package ox-hugo
   :ensure t
   :after ox)
+{{< /highlight >}}
+
+
+### Structure your posts {#structure-your-posts}
+
+Posts are held in a monolithic org document that gets exported to individial
+markdown files for Hugo to process. There's some metadata for setting things
+like categories and tags that come in handy. Let's look at the beginning of that
+file for an example:
+
+{{< highlight org >}}
+#+TITLE: Posts
+#+HUGO_BASE_DIR: ~/repos/carlf.github.io
+#+HUGO_SECTION: posts
+#+HUGO_CODE_FENCE: nil
+
+* Meta :@meta:
+** Colophon :meta:org:hugo:
+:PROPERTIES:
+:EXPORT_FILE_NAME: colophon
+:EXPORT_DATE: 2021-09-06
+:END:
 {{< /highlight >}}

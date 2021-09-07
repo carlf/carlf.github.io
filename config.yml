@@ -23,12 +23,15 @@ params:
     - icon: key
       name: "My GPG Key"
       url: https://keyoxide.org/hkp/50f1a8d452b5c094a656ce6aac084c5eec19856d
+    - icon: rss
+      name: RSS
+      url: https://carlf.io/index.xml
   style:
     darkestColor: "#2e3440"
     darkColor: "#3b4252"
     lightColor: "#d8dee9"
     lightestColor: "#eceff4"
-    primaryColor: "#a3be8c"
+    primaryColor: "#81a1c1"
 
 menu:
   main:
@@ -38,6 +41,3 @@ menu:
     - identifier: tags
       name: Tags
       url: /tags
-    - identifier: rss
-      name: RSS
-      url: /index.xml
