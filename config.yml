@@ -12,9 +12,6 @@ markup:
     ordered: false
     startLevel: 2
 
-social:
-  github: https://github.com/carlf
-
 params:
   author: Carl Flippin
   description: I'm just as confused as the rest of you
@@ -31,14 +28,14 @@ params:
     darkColor: "#3b4252"
     lightColor: "#d8dee9"
     lightestColor: "#eceff4"
-    primaryColor: "#8fbcbb"
+    primaryColor: "#a3be8c"
 
 menu:
   main:
     - identifier: home
       name: Home
       url: /
-    - identifier: tag
+    - identifier: tags
       name: Tags
       url: /tags
     - identifier: rss
