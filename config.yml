@@ -7,10 +7,6 @@ markup:
   highlight:
     guessSyntax: true
     style: nord
-  tableOfContents:
-    endLevel: 3
-    ordered: false
-    startLevel: 2
 
 params:
   author: Carl Flippin
@@ -22,7 +18,7 @@ params:
       url: https://github.com/carlf
     - icon: key
       name: "My GPG Key"
-      url: https://keyoxide.org/hkp/50f1a8d452b5c094a656ce6aac084c5eec19856d
+      url: https://keyoxide.org/50f1a8d452b5c094a656ce6aac084c5eec19856d
     - icon: rss
       name: RSS
       url: https://carlf.io/index.xml
@@ -38,9 +34,11 @@ menu:
     - identifier: home
       name: Home
       url: /
-    - identifier: tags
-      name: Tags
-      url: /tags
+      weight: 1
+    - identifier: categories
+      name: Categories
+      url: /categories
+      weight: 2
 
 module:
   imports:

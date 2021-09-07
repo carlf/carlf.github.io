@@ -58,7 +58,6 @@ Take a look at [Hugo Themes](<https://themes.gohugo.io/>) for more choices.
 My config ended up looking like this:
 
 {{< highlight yaml >}}
-# config.yml
 baseURL: https://carlf.io
 languageCode: en-us
 title: carlf.io
@@ -68,10 +67,6 @@ markup:
   highlight:
     guessSyntax: true
     style: nord
-  tableOfContents:
-    endLevel: 3
-    ordered: false
-    startLevel: 2
 
 params:
   author: Carl Flippin
@@ -83,25 +78,31 @@ params:
       url: https://github.com/carlf
     - icon: key
       name: "My GPG Key"
-      url: https://keyoxide.org/hkp/50f1a8d452b5c094a656ce6aac084c5eec19856d
+      url: https://keyoxide.org/50f1a8d452b5c094a656ce6aac084c5eec19856d
+    - icon: rss
+      name: RSS
+      url: https://carlf.io/index.xml
   style:
     darkestColor: "#2e3440"
     darkColor: "#3b4252"
     lightColor: "#d8dee9"
     lightestColor: "#eceff4"
-    primaryColor: "#8fbcbb"
+    primaryColor: "#81a1c1"
 
 menu:
   main:
     - identifier: home
       name: Home
       url: /
-    - identifier: tags
-      name: Tags
-      url: /tags
-    - identifier: rss
-      name: RSS
-      url: /index.xml
+      weight: 1
+    - identifier: categories
+      name: Categories
+      url: /categories
+      weight: 2
+
+module:
+  imports:
+    - path: github.com/vaga/hugo-theme-m10c
 {{< /highlight >}}
 
 Note that my theme is referenced by github URL rather than a simple name. This is enabled by the `hugo mod init` above.
