@@ -1,8 +1,8 @@
 +++
-title = "Colophon"
+title = "Colophon (Part 1)"
 author = ["Carl Flippin"]
 date = 2021-09-06
-tags = ["meta", "org", "hugo"]
+tags = ["meta", "hugo"]
 categories = ["meta"]
 draft = false
 +++
@@ -105,57 +105,8 @@ module:
     - path: github.com/vaga/hugo-theme-m10c
 {{< /highlight >}}
 
-Note that my theme is referenced by github URL rather than a simple name. This is enabled by the `hugo mod init` above.
+Note that my theme is referenced by github URL rather than a simple name. This
+is enabled by the `hugo mod init` above.
 
-
-## ox-hugo {#ox-hugo}
-
-For generation of the markdown used in Hugo, we use
-[ox-hugo](<https://ox-hugo.scripter.co/>). This module allows you to write your
-blog posts in regular old org but to export them as markdown suitable for Hugo's
-blackfriday markdown parser. It allows us to operate on org, which we are all
-comfortable with, but still take advantage of the conventiences of Hugo.
-
-
-### Installation {#installation}
-
-I am using [doom emacs](<https://github.com/hlissner/doom-emacs>) so enabling
-ox-hugo was as simple as:
-
-{{< highlight emacs-lisp >}}
-(doom! :lang
-       (org +hugo))
-{{< /highlight >}}
-
-If you are rolling your own emacs, it is available
-[here](<https://melpa.org/#/ox-hugo>) on MELPA as a package. If you are using the
-popular [use-package](<https://github.com/jwiegley/use-package>) macro, you could
-do the following:
-
-{{< highlight emacs-lisp >}}
-(use-package ox-hugo
-  :ensure t
-  :after ox)
-{{< /highlight >}}
-
-
-### Structure your posts {#structure-your-posts}
-
-Posts are held in a monolithic org document that gets exported to individial
-markdown files for Hugo to process. There's some metadata for setting things
-like categories and tags that come in handy. Let's look at the beginning of that
-file for an example:
-
-{{< highlight org >}}
-#+TITLE: Posts
-#+HUGO_BASE_DIR: ~/repos/carlf.github.io
-#+HUGO_SECTION: posts
-#+HUGO_CODE_FENCE: nil
-
-* Meta :@meta:
-** Colophon :meta:org:hugo:
-:PROPERTIES:
-:EXPORT_FILE_NAME: colophon
-:EXPORT_DATE: 2021-09-06
-:END:
-{{< /highlight >}}
+In the [next part]({{< relref "colophon_part_2" >}}) of this series, we will go over how to manage the posts
+themselves and how `ox-hugo` factors into all this.

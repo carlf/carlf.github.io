@@ -1,13 +1,13 @@
-#+TITLE: Posts
 #+HUGO_BASE_DIR: ~/repos/carlf.github.io
 #+HUGO_SECTION: posts
 #+HUGO_CODE_FENCE: nil
 
 * Meta :@meta:
-** Colophon :meta:org:hugo:
+** Colophon (Part 1) :meta:hugo:
 :PROPERTIES:
-:EXPORT_FILE_NAME: colophon
+:EXPORT_FILE_NAME: colophon_part_1
 :EXPORT_DATE: 2021-09-06
+:ID:       a35b08a0-d4a5-4b60-967d-dbfcf68490ea
 :END:
 This blog is managed with a monolithic org file representing all posts and Hugo
 managing the generation of the HTML. Some people just manage their blogs using
@@ -93,7 +93,20 @@ module:
     - path: github.com/vaga/hugo-theme-m10c
 #+end_src
 
-Note that my theme is referenced by github URL rather than a simple name. This is enabled by the =hugo mod init= above.
+Note that my theme is referenced by github URL rather than a simple name. This
+is enabled by the =hugo mod init= above.
+
+In the [[id:a749587a-a243-4146-aa99-6c42c6a47711][next part]] of this series, we will go over how to manage the posts
+themselves and how =ox-hugo= factors into all this.
+** Colophon (Part 2) :hugo:org:meta:
+:PROPERTIES:
+:EXPORT_FILE_NAME: colophon_part_2
+:EXPORT_DATE: 2021-09-07
+:ID:       a749587a-a243-4146-aa99-6c42c6a47711
+:END:
+This is part 2 of the colophon for this site. For part 1 see [[id:a35b08a0-d4a5-4b60-967d-dbfcf68490ea][here]]. This
+continuation will cover how to use ox-hugo to manage your content and publish it
+from org-mode files.
 *** ox-hugo
 For generation of the markdown used in Hugo, we use
 [ox-hugo](https://ox-hugo.scripter.co/). This module allows you to write your
@@ -121,20 +134,61 @@ do the following:
 #+end_src
 **** Structure your posts
 Posts are held in a monolithic org document that gets exported to individial
-markdown files for Hugo to process. There's some metadata for setting things
-like categories and tags that come in handy. Let's look at the beginning of that
-file for an example:
+markdown files for Hugo to process. There are some handy properties you can set
+to make things come out nice and neat and we'll go over them now.
+***** Global Settings
+First let's look at the preamble for the whole file.
 
 #+begin_src org
-,#+TITLE: Posts
 ,#+HUGO_BASE_DIR: ~/repos/carlf.github.io
 ,#+HUGO_SECTION: posts
 ,#+HUGO_CODE_FENCE: nil
+#+end_src
 
-,* Meta :@meta:
-,** Colophon :meta:org:hugo:
+Here we set some global options for the whole file. The =HUGO_BASE_DIR= setting
+should be set to the root of your hugo repo. This is where all the markdown will
+end up. The =HUGO_SECTION= should match the subdirectory that your posts would
+end up in. For most hugo installations this should just be =posts=. If you have
+done something tricky with your taxonomy, feel free to change that.
+
+The =HUGO_CODE_FENCE= set to =nil= will make ox-hugo use the highlight
+shortcode. If set to =t= ox-hugo will use the triple-backtick code fence.
+Looking at the generated HTML, they seem to have the same effect but it worked
+first when I had it set to =nil= so it has stayed =nil= for me. Note that both
+of these modes use [[https://github.com/alecthomas/chroma][Chroma]] for their highlighting which supports most common
+languages and has a ton of [[https://xyproto.github.io/splash/docs/][themes]] available.
+***** Per-post Settings
+Each post also has a number of settings. Let's look at the start of a post.
+
+#+begin_src org
+,** Colophon (Part 1) :meta:hugo:
 :PROPERTIES:
-:EXPORT_FILE_NAME: colophon
+:EXPORT_FILE_NAME: colophon_part_1
 :EXPORT_DATE: 2021-09-06
+:ID:       a35b08a0-d4a5-4b60-967d-dbfcf68490ea
 :END:
 #+end_src
+
+Note here that =EXPORT_FILE_NAME= is the name for the markdown file ox-hugo will
+generate. If you do not have an =EXPORT_FILE_NAME=, the file will not be
+exported.
+
+The =EXPORT_DATE= will be used for the published date in hugo. The =EXPORT_DATE=
+field is not strictly necessary. If you make your top-level headings TODO items,
+the timestamp for =CLOSED= will be used for the published data. If the heading
+is in a TODO status, it will be exported as a draft. If it is in a DONE state,
+it will be exported with draft set to false.
+
+The =ID= property is handy if you ever need to link between pages. The link to
+the first part of this series was created by a link to the id of that heading.
+The tags for the post are the tags on the top-level heading for that post. In
+this case we have the =meta= and =hugo= tags. Those will easily populate your
+taxonomy. Also note that the category at the top of the tree will be inherited
+by all posts below it.
+**** Exporting
+Now that we have our posts in a nice neat bundle or org, we need to export them
+so Hugo can process them and generate HTML. With standard keybindings, this is
+as simple as =C-c C-e H A=. This will take all of our posts in the current file
+and export them as individual markdown files ready for processing by hugo. Once
+this is done, fire up hugo with =hugo serve= and take a look at [[http://localhost:1313][localhost:1313]]
+to witness the fruits of your labors.
