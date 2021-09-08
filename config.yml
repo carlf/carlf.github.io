@@ -12,6 +12,7 @@ params:
   author: Carl Flippin
   description: I'm just as confused as the rest of you
   avatar: avatar.png
+  menu_item_separator: "|"
   social:
     - icon: github
       name: "My Github"
@@ -39,6 +40,10 @@ menu:
       name: Categories
       url: /categories
       weight: 2
+    - identifier: tags
+      name: Tags
+      url: /tags
+      weight: 3
 
 module:
   imports:
