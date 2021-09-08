@@ -1,6 +1,6 @@
 <!doctype html><html lang=en-us>
 <head>
-<title>Colophon // carlf.io</title>
+<title>Colophon (Part 1) // carlf.io</title>
 <link rel="shortcut icon" href=/favicon.ico>
 <meta charset=utf-8>
 <meta name=generator content="Hugo 0.88.1">
@@ -9,14 +9,14 @@
 <meta name=description content>
 <link rel=stylesheet href=https://carlf.io/css/main.min.b52e52a984e06b7678dd28ad6f501e94f3d73c526a5bdad3362df17c7ab83d9a.css>
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="Colophon">
+<meta name=twitter:title content="Colophon (Part 1)">
 <meta name=twitter:description content="This blog is managed with a monolithic org file representing all posts and Hugo managing the generation of the HTML. Some people just manage their blogs using org directly but using Hugo as an intermediary makes some things like theming easier and allows me to continue to work in org for my blog. This post goes over the major moving parts.
 Hugo Installation If you are on a Mac, installation is very simple.">
-<meta property="og:title" content="Colophon">
+<meta property="og:title" content="Colophon (Part 1)">
 <meta property="og:description" content="This blog is managed with a monolithic org file representing all posts and Hugo managing the generation of the HTML. Some people just manage their blogs using org directly but using Hugo as an intermediary makes some things like theming easier and allows me to continue to work in org for my blog. This post goes over the major moving parts.
 Hugo Installation If you are on a Mac, installation is very simple.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://carlf.io/posts/colophon/"><meta property="article:section" content="posts">
+<meta property="og:url" content="https://carlf.io/posts/colophon_part_1/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2021-09-06T00:00:00+00:00">
 <meta property="article:modified_time" content="2021-09-06T00:00:00+00:00">
 </head>
@@ -42,7 +42,7 @@ Hugo Installation If you are on a Mac, installation is very simple.">
 <main class=app-container>
 <article class=post>
 <header class=post-header>
-<h1 class=post-title>Colophon</h1>
+<h1 class=post-title>Colophon (Part 1)</h1>
 <div class=post-meta>
 <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
 Sep 6, 2021
@@ -52,7 +52,6 @@ Sep 6, 2021
 </div>
 <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
 <a class=tag href=https://carlf.io/tags/meta/>meta</a>
-<a class=tag href=https://carlf.io/tags/org/>org</a>
 <a class=tag href=https://carlf.io/tags/hugo/>hugo</a>
 </div>
 </div>
@@ -133,41 +132,10 @@ Take a look at <a href=https://themes.gohugo.io/>Hugo Themes</a> for more choice
 <span style=color:#81a1c1>module</span><span style=color:#eceff4>:</span>
   <span style=color:#81a1c1>imports</span><span style=color:#eceff4>:</span>
     - <span style=color:#81a1c1>path</span><span style=color:#eceff4>:</span> github.com/vaga/hugo-theme-m10c</code></pre></div>
-<p>Note that my theme is referenced by github URL rather than a simple name. This is enabled by the <code>hugo mod init</code> above.</p>
-<h2 id=ox-hugo>ox-hugo</h2>
-<p>For generation of the markdown used in Hugo, we use
-<a href=https://ox-hugo.scripter.co/>ox-hugo</a>. This module allows you to write your
-blog posts in regular old org but to export them as markdown suitable for Hugo&rsquo;s
-blackfriday markdown parser. It allows us to operate on org, which we are all
-comfortable with, but still take advantage of the conventiences of Hugo.</p>
-<h3 id=installation>Installation</h3>
-<p>I am using <a href=https://github.com/hlissner/doom-emacs>doom emacs</a> so enabling
-ox-hugo was as simple as:</p>
-<div class=highlight><pre tabindex=0 style=color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#eceff4>(</span>doom! <span style=color:#81a1c1>:lang</span>
-       <span style=color:#eceff4>(</span>org +hugo<span style=color:#eceff4>))</span></code></pre></div>
-<p>If you are rolling your own emacs, it is available
-<a href=https://melpa.org/#/ox-hugo>here</a> on MELPA as a package. If you are using the
-popular <a href=https://github.com/jwiegley/use-package>use-package</a> macro, you could
-do the following:</p>
-<div class=highlight><pre tabindex=0 style=color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=color:#eceff4>(</span><span style=color:#81a1c1>use-package</span> ox-hugo
-  <span style=color:#81a1c1>:ensure</span> <span style=color:#8fbcbb>t</span>
-  <span style=color:#81a1c1>:after</span> ox<span style=color:#eceff4>)</span></code></pre></div>
-<h3 id=structure-your-posts>Structure your posts</h3>
-<p>Posts are held in a monolithic org document that gets exported to individial
-markdown files for Hugo to process. There&rsquo;s some metadata for setting things
-like categories and tags that come in handy. Let&rsquo;s look at the beginning of that
-file for an example:</p>
-<div class=highlight><pre tabindex=0 style=color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-org data-lang=org><span style=color:#616e87;font-style:italic>#+TITLE</span><span style=color:#616e87;font-style:italic>: Posts</span>
-<span style=color:#616e87;font-style:italic>#+HUGO_BASE_DIR</span><span style=color:#616e87;font-style:italic>: ~/repos/carlf.github.io</span>
-<span style=color:#616e87;font-style:italic>#+HUGO_SECTION</span><span style=color:#616e87;font-style:italic>: posts</span>
-<span style=color:#616e87;font-style:italic>#+HUGO_CODE_FENCE</span><span style=color:#616e87;font-style:italic>: nil</span>
-
-<span style=color:#88c0d0;font-weight:700>*</span><span style=font-weight:700> Meta</span><span style=font-style:italic> :@meta:</span>
-<span style=color:#88c0d0;font-weight:700>**</span> Colophon<span style=font-style:italic> :meta:org:hugo:</span>
-<span style=color:#616e87;font-style:italic>:PROPERTIES:
-</span><span style=color:#616e87;font-style:italic></span><span style=color:#616e87;font-style:italic>:EXPORT_FILE_NAME: colophon
-</span><span style=color:#616e87;font-style:italic>:EXPORT_DATE: 2021-09-06
-</span><span style=color:#616e87;font-style:italic></span><span style=color:#616e87;font-style:italic>:END:</span></code></pre></div>
+<p>Note that my theme is referenced by github URL rather than a simple name. This
+is enabled by the <code>hugo mod init</code> above.</p>
+<p>In the <a href=/posts/colophon_part_2/>next part</a> of this series, we will go over how to manage the posts
+themselves and how <code>ox-hugo</code> factors into all this.</p>
 </div>
 <div class=post-footer>
 </div>
