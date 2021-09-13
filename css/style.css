@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif&display=swap');
+
+body {
+  background-color: #2E3440;
+  color: #d8dee9;
+  font-family: 'Noto Serif', serif;
+  display: grid;
+  grid-template-columns: 1fr minmax(30em, 45em) 1fr;
+  grid-template-rows: 4em 1fr 4em;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". header ."
+    ". main ."
+    ". footer .";
+}
+
+a {
+  text-decoration: none;
+  color: #88c0d0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.highlight {
+  border-left: 2px solid #81a1c1;
+  padding-left: 2px;
+  font-family: 'Noto Sans', sans;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 20em 1fr max-content;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo . nav";
+  grid-area: header;
+  background-color: #4c566a;
+  padding: 5px;
+  align-items: center;
+}
+
+.logo { grid-area: logo; }
+
+nav {
+  grid-area: nav;
+}
+
+nav li {
+  display: inline;
+}
+
+nav li + li::before {
+    content: " | ";
+}
+
+main {
+  grid-area: main;
+  background-color: #4c566a;
+  padding: 10px;
+  border-top: 2px solid #d8dee9;
+  border-bottom: 2px solid #d8dee9;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #4c566a;
+  padding: 5px;
+}
