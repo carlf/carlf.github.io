@@ -1,2 +1,6 @@
-github.com/vaga/hugo-theme-m10c v0.0.0-20210308142629-3094e3f118f9 h1:z1ZnexHTtnAPq67+rIZT99WmwjMjE2YotTCzfirCwbg=
-github.com/vaga/hugo-theme-m10c v0.0.0-20210308142629-3094e3f118f9/go.mod h1:3196jMGTXhINTYZ+dXuDt53xvUQovqOj67kuczeXsjU=
+github.com/carlf/hugo-theme-olympus v0.0.0-20210913213333-c0367b2b49f2 h1:DrdBgrYcllvbWMk0oiwg2NqnCx3jhjgsHgXkteg0gHw=
+github.com/carlf/hugo-theme-olympus v0.0.0-20210913213333-c0367b2b49f2/go.mod h1:jixp4TDzNntsKtKVfOyGhnRrCpQZdMhXiTTjw3megw4=
+github.com/carlf/hugo-theme-olympus v0.0.0-20210913215706-fc798767fefd h1:kCsjnH7ksLFOBBEsfc/uNS5+toXzllMcOLg7az/5Ufc=
+github.com/carlf/hugo-theme-olympus v0.0.0-20210913215706-fc798767fefd/go.mod h1:jixp4TDzNntsKtKVfOyGhnRrCpQZdMhXiTTjw3megw4=
+github.com/carlf/hugo-theme-olympus v0.0.0-20210913215917-b556c620672e h1:PEr5fe4dDLtdvIZ0jCIGmu3fslngT8IOJAMfqitFsnU=
+github.com/carlf/hugo-theme-olympus v0.0.0-20210913215917-b556c620672e/go.mod h1:jixp4TDzNntsKtKVfOyGhnRrCpQZdMhXiTTjw3megw4=
