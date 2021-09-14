@@ -16,6 +16,7 @@ author:
   homepage: https://carlf.io
 
 params:
+  description: "Laziness, Impatience, Hubris"
   mainSections:
     - posts
   socials:
@@ -23,6 +24,8 @@ params:
       link: https://github.com/carlf
     - name: LinkedIn
       link: https://www.linkedin.com/in/carlflippin/
+    - name: RSS
+      link: /index.xml
 
 menu:
   main:
