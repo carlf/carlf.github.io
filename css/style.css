@@ -51,6 +51,8 @@ header {
 
 nav {
   grid-area: nav;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 nav li {
