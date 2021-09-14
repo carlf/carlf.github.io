@@ -1,12 +1,2 @@
-github.com/carlf/hugo-theme-olympus v0.0.0-20210913213333-c0367b2b49f2 h1:DrdBgrYcllvbWMk0oiwg2NqnCx3jhjgsHgXkteg0gHw=
-github.com/carlf/hugo-theme-olympus v0.0.0-20210913213333-c0367b2b49f2/go.mod h1:jixp4TDzNntsKtKVfOyGhnRrCpQZdMhXiTTjw3megw4=
-github.com/carlf/hugo-theme-olympus v0.0.0-20210913215706-fc798767fefd h1:kCsjnH7ksLFOBBEsfc/uNS5+toXzllMcOLg7az/5Ufc=
-github.com/carlf/hugo-theme-olympus v0.0.0-20210913215706-fc798767fefd/go.mod h1:jixp4TDzNntsKtKVfOyGhnRrCpQZdMhXiTTjw3megw4=
-github.com/carlf/hugo-theme-olympus v0.0.0-20210913215917-b556c620672e h1:PEr5fe4dDLtdvIZ0jCIGmu3fslngT8IOJAMfqitFsnU=
-github.com/carlf/hugo-theme-olympus v0.0.0-20210913215917-b556c620672e/go.mod h1:jixp4TDzNntsKtKVfOyGhnRrCpQZdMhXiTTjw3megw4=
-github.com/carlf/hugo-theme-olympus v0.0.0-20210913224224-b99781d341dc h1:BMy9I4aWnN5T3aRC6IN1T/ip50SOwIeT9UOMeoIGrmQ=
-github.com/carlf/hugo-theme-olympus v0.0.0-20210913224224-b99781d341dc/go.mod h1:jixp4TDzNntsKtKVfOyGhnRrCpQZdMhXiTTjw3megw4=
-github.com/carlf/hugo-theme-olympus v0.0.0-20210913224333-699351b58560 h1:/VWXs239ebjzdPiMWvBT+Gw34BgiLubh1TTQJqkD2VI=
-github.com/carlf/hugo-theme-olympus v0.0.0-20210913224333-699351b58560/go.mod h1:jixp4TDzNntsKtKVfOyGhnRrCpQZdMhXiTTjw3megw4=
-github.com/carlf/hugo-theme-olympus v0.0.0-20210913234620-8ef1c600ca52 h1:b1JaFXRyOQwoIZ8qTWsUga3RP9Vl4/G90NUO0f/di5M=
-github.com/carlf/hugo-theme-olympus v0.0.0-20210913234620-8ef1c600ca52/go.mod h1:jixp4TDzNntsKtKVfOyGhnRrCpQZdMhXiTTjw3megw4=
+github.com/carlf/hugo-theme-olympus v0.0.0-20210914020153-f54a29e12329 h1:7aykKEU0i6cTqs+IfYQQ5AJ/hiddPh5NoMWo6b/Wqkc=
+github.com/carlf/hugo-theme-olympus v0.0.0-20210914020153-f54a29e12329/go.mod h1:jixp4TDzNntsKtKVfOyGhnRrCpQZdMhXiTTjw3megw4=
