@@ -42,14 +42,15 @@ for more details. To initialize your website as a module, run the following:</p>
 <div class=highlight><pre tabindex=0 style=color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>hugo mod init github.com/carlf/carlf.github.io</code></pre></div>
 <h3 id=configure-hugo>Configure Hugo</h3>
 <p>Now we need to configure Hugo so we get some decent looking output. The major
-parts here are picking a theme and configuring it. Here I have chosen the
-<a href=https://github.com/vaga/hugo-theme-m10c>m10c</a> theme. There are many available.
-Take a look at <a href=https://themes.gohugo.io/>Hugo Themes</a> for more choices.</p>
+parts here are picking a theme and configuring it. I ended up writing my own
+called <a href=https://github.com/carlf/hugo-theme-olympus>olympus</a> There are many
+available. Take a look at <a href=https://themes.gohugo.io/>Hugo Themes</a> for more
+choices.</p>
 <p>My config ended up looking like this:</p>
 <div class=highlight><pre tabindex=0 style=color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#81a1c1>baseURL</span><span style=color:#eceff4>:</span> https://carlf.io
 <span style=color:#81a1c1>languageCode</span><span style=color:#eceff4>:</span> en-us
 <span style=color:#81a1c1>title</span><span style=color:#eceff4>:</span> carlf.io
-<span style=color:#81a1c1>theme</span><span style=color:#eceff4>:</span> github.com/vaga/hugo-theme-m10c
+<span style=color:#81a1c1>theme</span><span style=color:#eceff4>:</span> github.com/carlf/hugo-theme-olympus
 
 <span style=color:#81a1c1>markup</span><span style=color:#eceff4>:</span>
   <span style=color:#81a1c1>highlight</span><span style=color:#eceff4>:</span>
@@ -58,39 +59,21 @@ Take a look at <a href=https://themes.gohugo.io/>Hugo Themes</a> for more choice
 
 <span style=color:#81a1c1>params</span><span style=color:#eceff4>:</span>
   <span style=color:#81a1c1>author</span><span style=color:#eceff4>:</span> Carl Flippin
-  <span style=color:#81a1c1>description</span><span style=color:#eceff4>:</span> I&#39;m just as confused as the rest of you
-  <span style=color:#81a1c1>avatar</span><span style=color:#eceff4>:</span> avatar.png
-  <span style=color:#81a1c1>social</span><span style=color:#eceff4>:</span>
-    - <span style=color:#81a1c1>icon</span><span style=color:#eceff4>:</span> github
-      <span style=color:#81a1c1>name</span><span style=color:#eceff4>:</span> <span style=color:#a3be8c>&#34;My Github&#34;</span>
-      <span style=color:#81a1c1>url</span><span style=color:#eceff4>:</span> https://github.com/carlf
-    - <span style=color:#81a1c1>icon</span><span style=color:#eceff4>:</span> key
-      <span style=color:#81a1c1>name</span><span style=color:#eceff4>:</span> <span style=color:#a3be8c>&#34;My GPG Key&#34;</span>
-      <span style=color:#81a1c1>url</span><span style=color:#eceff4>:</span> https://keyoxide.org/50f1a8d452b5c094a656ce6aac084c5eec19856d
-    - <span style=color:#81a1c1>icon</span><span style=color:#eceff4>:</span> rss
-      <span style=color:#81a1c1>name</span><span style=color:#eceff4>:</span> RSS
-      <span style=color:#81a1c1>url</span><span style=color:#eceff4>:</span> https://carlf.io/index.xml
-  <span style=color:#81a1c1>style</span><span style=color:#eceff4>:</span>
-    <span style=color:#81a1c1>darkestColor</span><span style=color:#eceff4>:</span> <span style=color:#a3be8c>&#34;#2e3440&#34;</span>
-    <span style=color:#81a1c1>darkColor</span><span style=color:#eceff4>:</span> <span style=color:#a3be8c>&#34;#3b4252&#34;</span>
-    <span style=color:#81a1c1>lightColor</span><span style=color:#eceff4>:</span> <span style=color:#a3be8c>&#34;#d8dee9&#34;</span>
-    <span style=color:#81a1c1>lightestColor</span><span style=color:#eceff4>:</span> <span style=color:#a3be8c>&#34;#eceff4&#34;</span>
-    <span style=color:#81a1c1>primaryColor</span><span style=color:#eceff4>:</span> <span style=color:#a3be8c>&#34;#81a1c1&#34;</span>
 
 <span style=color:#81a1c1>menu</span><span style=color:#eceff4>:</span>
   <span style=color:#81a1c1>main</span><span style=color:#eceff4>:</span>
-    - <span style=color:#81a1c1>identifier</span><span style=color:#eceff4>:</span> home
-      <span style=color:#81a1c1>name</span><span style=color:#eceff4>:</span> Home
-      <span style=color:#81a1c1>url</span><span style=color:#eceff4>:</span> /
-      <span style=color:#81a1c1>weight</span><span style=color:#eceff4>:</span> <span style=color:#b48ead>1</span>
     - <span style=color:#81a1c1>identifier</span><span style=color:#eceff4>:</span> categories
       <span style=color:#81a1c1>name</span><span style=color:#eceff4>:</span> Categories
       <span style=color:#81a1c1>url</span><span style=color:#eceff4>:</span> /categories
       <span style=color:#81a1c1>weight</span><span style=color:#eceff4>:</span> <span style=color:#b48ead>2</span>
+    - <span style=color:#81a1c1>identifier</span><span style=color:#eceff4>:</span> tags
+      <span style=color:#81a1c1>name</span><span style=color:#eceff4>:</span> Tags
+      <span style=color:#81a1c1>url</span><span style=color:#eceff4>:</span> /tags
+      <span style=color:#81a1c1>weight</span><span style=color:#eceff4>:</span> <span style=color:#b48ead>3</span>
 
 <span style=color:#81a1c1>module</span><span style=color:#eceff4>:</span>
   <span style=color:#81a1c1>imports</span><span style=color:#eceff4>:</span>
-    - <span style=color:#81a1c1>path</span><span style=color:#eceff4>:</span> github.com/vaga/hugo-theme-m10c</code></pre></div>
+  - <span style=color:#81a1c1>path</span><span style=color:#eceff4>:</span> github.com/carlf/hugo-theme-olympus</code></pre></div>
 <p>Note that my theme is referenced by github URL rather than a simple name. This
 is enabled by the <code>hugo mod init</code> above.</p>
 <p>In the <a href=/posts/colophon_part_2/>next part</a> of this series, we will go over how to manage the posts
