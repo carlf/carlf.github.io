@@ -51,9 +51,10 @@ hugo mod init github.com/carlf/carlf.github.io
 ### Configure Hugo {#configure-hugo}
 
 Now we need to configure Hugo so we get some decent looking output. The major
-parts here are picking a theme and configuring it. Here I have chosen the
-[m10c](<https://github.com/vaga/hugo-theme-m10c>) theme. There are many available.
-Take a look at [Hugo Themes](<https://themes.gohugo.io/>) for more choices.
+parts here are picking a theme and configuring it. I ended up writing my own
+called [olympus](<https://github.com/carlf/hugo-theme-olympus>) There are many
+available. Take a look at [Hugo Themes](<https://themes.gohugo.io/>) for more
+choices.
 
 My config ended up looking like this:
 
@@ -61,7 +62,7 @@ My config ended up looking like this:
 baseURL: https://carlf.io
 languageCode: en-us
 title: carlf.io
-theme: github.com/vaga/hugo-theme-m10c
+theme: github.com/carlf/hugo-theme-olympus
 
 markup:
   highlight:
@@ -70,39 +71,21 @@ markup:
 
 params:
   author: Carl Flippin
-  description: I'm just as confused as the rest of you
-  avatar: avatar.png
-  social:
-    - icon: github
-      name: "My Github"
-      url: https://github.com/carlf
-    - icon: key
-      name: "My GPG Key"
-      url: https://keyoxide.org/50f1a8d452b5c094a656ce6aac084c5eec19856d
-    - icon: rss
-      name: RSS
-      url: https://carlf.io/index.xml
-  style:
-    darkestColor: "#2e3440"
-    darkColor: "#3b4252"
-    lightColor: "#d8dee9"
-    lightestColor: "#eceff4"
-    primaryColor: "#81a1c1"
 
 menu:
   main:
-    - identifier: home
-      name: Home
-      url: /
-      weight: 1
     - identifier: categories
       name: Categories
       url: /categories
       weight: 2
+    - identifier: tags
+      name: Tags
+      url: /tags
+      weight: 3
 
 module:
   imports:
-    - path: github.com/vaga/hugo-theme-m10c
+  - path: github.com/carlf/hugo-theme-olympus
 {{< /highlight >}}
 
 Note that my theme is referenced by github URL rather than a simple name. This
