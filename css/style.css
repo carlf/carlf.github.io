@@ -38,25 +38,30 @@ header {
   grid-template-columns: 10em 1fr 15em;
   grid-template-rows: 1fr;
   gap: 0px 0px;
-  grid-auto-flow: row;
   grid-template-areas:
     "logo . nav";
   grid-area: header;
   background-color: #4c566a;
   padding: 5px;
-  align-items: center;
 }
 
-.logo { grid-area: logo; }
+.logo {
+  grid-area: logo;
+  margin: auto auto 5px 5px;
+  margin-block-end: 0;
+}
 
 nav {
   grid-area: nav;
-  margin-left: auto;
-  margin-right: 0;
+  margin: auto 5px 5px auto;
+}
+
+nav ul {
+  margin: 0;
 }
 
 nav li {
-  display: inline;
+  display: inline-block;
 }
 
 nav li + li::before {
