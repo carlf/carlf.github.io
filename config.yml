@@ -10,19 +10,6 @@ markup:
 
 params:
   author: Carl Flippin
-  description: I'm just as confused as the rest of you
-  avatar: avatar.png
-  menu_item_separator: "|"
-  social:
-    - icon: github
-      name: "My Github"
-      url: https://github.com/carlf
-    - icon: key
-      name: "My GPG Key"
-      url: https://keyoxide.org/50f1a8d452b5c094a656ce6aac084c5eec19856d
-    - icon: rss
-      name: RSS
-      url: https://carlf.io/index.xml
 
 menu:
   main:
