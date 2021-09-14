@@ -18,12 +18,13 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: #88c0d0;
+  text-decoration: underline solid #81a1c1 2px;
+  color: #d8dee9;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline solid #81a1c1;
+  background-color: #2e3440;
 }
 
 .highlight {
