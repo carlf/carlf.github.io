@@ -1,7 +1,7 @@
 +++
 title = "Blogging with org-mode and hugo"
 author = ["Carl Flippin"]
-date = 2021-09-14
+date = 2021-09-16
 tags = ["org", "hugo", "emacs"]
 categories = ["hugo"]
 draft = false
@@ -28,7 +28,7 @@ is as simple as adding the following to your init.el:
 Run a doom sync and you will be good to go.
 
 If you are using a more vanilla emacs, you just need the following to load
-ox-hugo with `use-package`:
+ox-hugo with the popular `use-package` macro:
 
 {{< highlight emacs-lisp >}}
 (use-package ox-hugo
@@ -57,7 +57,7 @@ First, the document starts with some key configuration.
 {{< /highlight >}}
 
 This configures ox-hugo by telling it where the markdown should be exported to,
-what secion the top-level headings should be exported to, and to use the
+what section the top-level headings should be exported to, and to use the
 highlight shortcode rather than the triple-backtick code fence. Since my blog is
 configured using the default code highlighter, I went with `nil` here but you
 could just as easily set it to `t`.
