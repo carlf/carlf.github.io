@@ -7,7 +7,7 @@
 <meta name=author content="Carl Flippin">
 <meta property="og:url" content="https://carlf.io/posts/blogging_with_org_and_hugo/">
 <link rel=canonical href=https://carlf.io/posts/blogging_with_org_and_hugo/><link rel=alternate type=application/atom+xml href=https://carlf.ioindex.xml title="Carl's Blog">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/carlf.io"},"articleSection":"posts","name":"Blogging with org-mode and hugo","headline":"Blogging with org-mode and hugo","description":"Once you are far down the path of using emacs and org-mode, it feels wasteful to learn a whole new scheme for generating text. As much as I love markdown, I would much rather put my muscle memory to use keeping my content in org-mode files. This thinking took me to the excellent org-mode extension ox-hugo. This module allows you to keep your content in a monolithic org file and simply exports neatly to the markdown that hugo expects.","inLanguage":"en-US","author":"Carl Flippin","creator":"Carl Flippin","publisher":"Carl Flippin","accountablePerson":"Carl Flippin","copyrightHolder":"Carl Flippin","copyrightYear":"2021","datePublished":"2021-09-14 00:00:00 \u002b0000 UTC","dateModified":"2021-09-14 00:00:00 \u002b0000 UTC","url":"https:\/\/carlf.io\/posts\/blogging_with_org_and_hugo\/","keywords":["org","hugo","emacs"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/carlf.io"},"articleSection":"posts","name":"Blogging with org-mode and hugo","headline":"Blogging with org-mode and hugo","description":"Once you are far down the path of using emacs and org-mode, it feels wasteful to learn a whole new scheme for generating text. As much as I love markdown, I would much rather put my muscle memory to use keeping my content in org-mode files. This thinking took me to the excellent org-mode extension ox-hugo. This module allows you to keep your content in a monolithic org file and simply exports neatly to the markdown that hugo expects.","inLanguage":"en-US","author":"Carl Flippin","creator":"Carl Flippin","publisher":"Carl Flippin","accountablePerson":"Carl Flippin","copyrightHolder":"Carl Flippin","copyrightYear":"2021","datePublished":"2021-09-16 00:00:00 \u002b0000 UTC","dateModified":"2021-09-16 00:00:00 \u002b0000 UTC","url":"https:\/\/carlf.io\/posts\/blogging_with_org_and_hugo\/","keywords":["org","hugo","emacs"]}</script>
 <title>Blogging with org-mode and hugo</title>
 <meta property="og:title" content="Blogging with org-mode and hugo">
 <meta property="og:type" content="article">
@@ -50,8 +50,8 @@
 <h1 class=post-title>Blogging with org-mode and hugo</h1>
 <div class="row post-desc">
 <div class=col-xs-6>
-<time class=post-date datetime="2021-09-14 00:00:00 UTC">
-14 Sep 2021
+<time class=post-date datetime="2021-09-16 00:00:00 UTC">
+16 Sep 2021
 </time>
 </div>
 <div class=col-xs-6>
@@ -75,7 +75,7 @@ is as simple as adding the following to your init.el:</p>
        (org +hugo))</code></pre></div>
 <p>Run a doom sync and you will be good to go.</p>
 <p>If you are using a more vanilla emacs, you just need the following to load
-ox-hugo with <code>use-package</code>:</p>
+ox-hugo with the popular <code>use-package</code> macro:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-emacs-lisp data-lang=emacs-lisp>(use-package ox-hugo
   :ensure t
   :after ox)</code></pre></div>
@@ -91,7 +91,7 @@ a few things to note about the structure of this org-mode doc.</p>
 <span style=font-style:italic>#+HUGO_SECTION</span><span style=font-style:italic>: posts</span>
 <span style=font-style:italic>#+HUGO_CODE_FENCE</span><span style=font-style:italic>: nil</span></code></pre></div>
 <p>This configures ox-hugo by telling it where the markdown should be exported to,
-what secion the top-level headings should be exported to, and to use the
+what section the top-level headings should be exported to, and to use the
 highlight shortcode rather than the triple-backtick code fence. Since my blog is
 configured using the default code highlighter, I went with <code>nil</code> here but you
 could just as easily set it to <code>t</code>.</p>
