@@ -5,16 +5,14 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=author content="Carl Flippin">
-<meta property="og:url" content="https://carlf.io/posts/colophon_part_1/">
-<link rel=canonical href=https://carlf.io/posts/colophon_part_1/><link rel=alternate type=application/atom+xml href=https://carlf.ioindex.xml title="Carl's Blog">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/carlf.io"},"articleSection":"posts","name":"Colophon (Part 1)","headline":"Colophon (Part 1)","description":"This blog is managed with a monolithic org file representing all posts and Hugo managing the generation of the HTML. Some people just manage their blogs using org directly but using Hugo as an intermediary makes some things like theming easier and allows me to continue to work in org for my blog. This post goes over the major moving parts.\nHugo Installation If you are on a Mac, installation is very simple.","inLanguage":"en-US","author":"Carl Flippin","creator":"Carl Flippin","publisher":"Carl Flippin","accountablePerson":"Carl Flippin","copyrightHolder":"Carl Flippin","copyrightYear":"2021","datePublished":"2021-09-06 00:00:00 \u002b0000 UTC","dateModified":"2021-09-06 00:00:00 \u002b0000 UTC","url":"https:\/\/carlf.io\/posts\/colophon_part_1\/","keywords":["meta","hugo"]}</script>
-<title>Colophon (Part 1)</title>
-<meta property="og:title" content="Colophon (Part 1)">
+<meta property="og:url" content="https://carlf.io/posts/blogging_with_org_and_hugo/">
+<link rel=canonical href=https://carlf.io/posts/blogging_with_org_and_hugo/><link rel=alternate type=application/atom+xml href=https://carlf.ioindex.xml title="Carl's Blog">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/carlf.io"},"articleSection":"posts","name":"Blogging with org-mode and hugo","headline":"Blogging with org-mode and hugo","description":"Once you are far down the path of using emacs and org-mode, it feels wasteful to learn a whole new scheme for generating text. As much as I love markdown, I would much rather put my muscle memory to use keeping my content in org-mode files. This thinking took me to the excellent org-mode extension ox-hugo. This module allows you to keep your content in a monolithic org file and simply exports neatly to the markdown that hugo expects.","inLanguage":"en-US","author":"Carl Flippin","creator":"Carl Flippin","publisher":"Carl Flippin","accountablePerson":"Carl Flippin","copyrightHolder":"Carl Flippin","copyrightYear":"2021","datePublished":"2021-09-14 00:00:00 \u002b0000 UTC","dateModified":"2021-09-14 00:00:00 \u002b0000 UTC","url":"https:\/\/carlf.io\/posts\/blogging_with_org_and_hugo\/","keywords":["org","hugo","emacs"]}</script>
+<title>Blogging with org-mode and hugo</title>
+<meta property="og:title" content="Blogging with org-mode and hugo">
 <meta property="og:type" content="article">
-<meta property="og:description" content="This blog is managed with a monolithic org file representing all posts and Hugo managing the generation of the HTML. Some people just manage their blogs using org directly but using Hugo as an intermediary makes some things like theming easier and allows me to continue to work in org for my blog. This post goes over the major moving parts.
-Hugo Installation If you are on a Mac, installation is very simple.">
-<meta name=description content="This blog is managed with a monolithic org file representing all posts and Hugo managing the generation of the HTML. Some people just manage their blogs using org directly but using Hugo as an intermediary makes some things like theming easier and allows me to continue to work in org for my blog. This post goes over the major moving parts.
-Hugo Installation If you are on a Mac, installation is very simple.">
+<meta property="og:description" content="Once you are far down the path of using emacs and org-mode, it feels wasteful to learn a whole new scheme for generating text. As much as I love markdown, I would much rather put my muscle memory to use keeping my content in org-mode files. This thinking took me to the excellent org-mode extension ox-hugo. This module allows you to keep your content in a monolithic org file and simply exports neatly to the markdown that hugo expects.">
+<meta name=description content="Once you are far down the path of using emacs and org-mode, it feels wasteful to learn a whole new scheme for generating text. As much as I love markdown, I would much rather put my muscle memory to use keeping my content in org-mode files. This thinking took me to the excellent org-mode extension ox-hugo. This module allows you to keep your content in a monolithic org file and simply exports neatly to the markdown that hugo expects.">
 <meta property="og:locale" content="en-us">
 <style>body{font-family:bree serif,sans-serif;-webkit-font-smoothing:antialiased;margin:0 20px}article{max-width:800px;margin-left:auto;margin-right:auto}a{color:#000;text-decoration:none}a:hover{font-weight:600;text-decoration:underline}.post-ads{margin:50px 0}.markdown-body{font-size:18px;max-width:100%}.markdown-body a{text-decoration:underline;text-decoration-color:#000}.markdown-body pre{padding:16px;overflow:auto;border-radius:10px}.markdown-body code{padding:.2em .4em;font-size:85%;background-color:#f6f8fa;border-radius:6px}.markdown-body pre>code{padding:0;font-size:100%;background-color:inherit;border:0}.Chinese .markdown-body{line-height:200%}.site-date-catalog{font-size:2rem}.header-title{font-size:2rem;font-weight:700;margin-top:32px;font-family:bungee shade,sans-serif}.header-title a{text-decoration:none}.header-subtitle{color:#666}.header-items{margin:10px 0}.header-item{margin:0 5px}.header-line{width:100%;border-width:2px;border-color:#482936;border-style:solid none none none}.lang-switch{font-weight:600}#posts-list{min-height:600px}.posts-line{font-size:1.2rem;margin:12px 0}.posts-categories{font-size:.8rem;margin:auto;text-align:center}.posts-category{padding:3px 0;border:#000 2px solid;border-radius:5px}.site-footer{margin-top:50px}.site-footer-item{margin-right:12px}.post-content img{max-width:100%;display:block;margin-right:auto;margin-top:12px}.post-header{margin-bottom:50px}.post-title{font-size:2rem;font-weight:600}.post-tags{display:inline;font-weight:600;padding:2px 5px;margin-right:6px;border:#000 2px solid;border-radius:5px}.post-date{font-weight:800;font-style:italic}.post-author{float:right;font-weight:600}.page-content{min-height:60%}.post-content{margin-bottom:50px}.post-content p{hyphens:auto;line-height:1.8;text-justify:ideographic;margin-bottom:1em}.related-content{border-width:3px;border-style:solid;border-color:#000;padding:0 10px;margin-bottom:50px;margin-top:100px}.related-content li{margin:5px 0}.taxonomy-term{font-size:3rem}.gallery-img{text-align:center}.gallery-img span{text-align:center}.gallery-img-desc{font-size:.8em;font-weight:800}#disqus_thread{position:relative}#disqus_thread:after{content:"";display:block;height:55px;width:100%;position:absolute;bottom:0;background:#fff}@media screen and (max-width:600px){.header-title,.header-subtitle,.header-items{text-align:center}.posts-line{font-size:16px}.markdown-body{font-size:16px}.post-title{font-size:2rem}.post-content p{letter-spacing:.05em}}@media screen and (max-width:48em){.posts-category{display:none}}</style>
 <style>.container,.container-fluid{margin-right:auto;margin-left:auto}.container-fluid{padding-right:2rem;padding-left:2rem}.row{box-sizing:border-box;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 1 auto;flex:initial;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-.5rem;margin-left:-.5rem}.row.reverse{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.col.reverse{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}.col-xs,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-offset-0,.col-xs-offset-1,.col-xs-offset-10,.col-xs-offset-11,.col-xs-offset-12,.col-xs-offset-2,.col-xs-offset-3,.col-xs-offset-4,.col-xs-offset-5,.col-xs-offset-6,.col-xs-offset-7,.col-xs-offset-8,.col-xs-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-xs{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-xs-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-xs-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-xs-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-xs-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-xs-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-xs-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-xs-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-xs-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-xs-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-xs-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-xs-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-xs-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-xs-offset-0{margin-left:0}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-11{margin-left:91.66666667%}.start-xs{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-xs{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-xs{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-xs{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-xs{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-xs{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-xs{-ms-flex-pack:distribute;justify-content:space-around}.between-xs{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-xs{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-xs{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}@media only screen and (min-width:48em){.container{width:49rem}.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-offset-0,.col-sm-offset-1,.col-sm-offset-10,.col-sm-offset-11,.col-sm-offset-12,.col-sm-offset-2,.col-sm-offset-3,.col-sm-offset-4,.col-sm-offset-5,.col-sm-offset-6,.col-sm-offset-7,.col-sm-offset-8,.col-sm-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-sm{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-sm-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-sm-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-sm-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-sm-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-sm-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-sm-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-sm-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-sm-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-sm-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-sm-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-sm-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-sm-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-sm-offset-0{margin-left:0}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-11{margin-left:91.66666667%}.start-sm{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-sm{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-sm{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-sm{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-sm{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-sm{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-sm{-ms-flex-pack:distribute;justify-content:space-around}.between-sm{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-sm{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-sm{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}@media only screen and (min-width:64em){.container{width:65rem}.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-offset-0,.col-md-offset-1,.col-md-offset-10,.col-md-offset-11,.col-md-offset-12,.col-md-offset-2,.col-md-offset-3,.col-md-offset-4,.col-md-offset-5,.col-md-offset-6,.col-md-offset-7,.col-md-offset-8,.col-md-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-md{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-md-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-md-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-md-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-md-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-md-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-md-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-md-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-md-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-md-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-md-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-md-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-md-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-md-offset-0{margin-left:0}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-3{margin-left:25%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-6{margin-left:50%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-9{margin-left:75%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-11{margin-left:91.66666667%}.start-md{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-md{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-md{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-md{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-md{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-md{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-md{-ms-flex-pack:distribute;justify-content:space-around}.between-md{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-md{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-md{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}@media only screen and (min-width:75em){.container{width:76rem}.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-offset-0,.col-lg-offset-1,.col-lg-offset-10,.col-lg-offset-11,.col-lg-offset-12,.col-lg-offset-2,.col-lg-offset-3,.col-lg-offset-4,.col-lg-offset-5,.col-lg-offset-6,.col-lg-offset-7,.col-lg-offset-8,.col-lg-offset-9{box-sizing:border-box;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:none;padding-right:.5rem;padding-left:.5rem}.col-lg{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}.col-lg-1{-ms-flex-preferred-size:8.33333333%;flex-basis:8.33333333%;max-width:8.33333333%}.col-lg-2{-ms-flex-preferred-size:16.66666667%;flex-basis:16.66666667%;max-width:16.66666667%}.col-lg-3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.col-lg-4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.col-lg-5{-ms-flex-preferred-size:41.66666667%;flex-basis:41.66666667%;max-width:41.66666667%}.col-lg-6{-ms-flex-preferred-size:50%;flex-basis:50%;max-width:50%}.col-lg-7{-ms-flex-preferred-size:58.33333333%;flex-basis:58.33333333%;max-width:58.33333333%}.col-lg-8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.col-lg-9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}.col-lg-10{-ms-flex-preferred-size:83.33333333%;flex-basis:83.33333333%;max-width:83.33333333%}.col-lg-11{-ms-flex-preferred-size:91.66666667%;flex-basis:91.66666667%;max-width:91.66666667%}.col-lg-12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}.col-lg-offset-0{margin-left:0}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-11{margin-left:91.66666667%}.start-lg{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:start}.center-lg{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.end-lg{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:end}.top-lg{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.middle-lg{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.bottom-lg{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.around-lg{-ms-flex-pack:distribute;justify-content:space-around}.between-lg{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.first-lg{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.last-lg{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}}</style>
@@ -31,7 +29,7 @@ Hugo Installation If you are on a Mac, installation is very simple.">
 <div class=header-title>
 <a href=/>Carl Flippin</a>
 </div>
-<div class=header-subtitle></div>
+<div class=header-subtitle>Laziness, Impatience, Hubris</div>
 </header>
 <div class="row end-md center-xs header-items">
 <div class=header-item>
@@ -49,11 +47,11 @@ Hugo Installation If you are on a Mac, installation is very simple.">
 <div class=header-line></div>
 </div>
 <header class=post-header>
-<h1 class=post-title>Colophon (Part 1)</h1>
+<h1 class=post-title>Blogging with org-mode and hugo</h1>
 <div class="row post-desc">
 <div class=col-xs-6>
-<time class=post-date datetime="2021-09-06 00:00:00 UTC">
-06 Sep 2021
+<time class=post-date datetime="2021-09-14 00:00:00 UTC">
+14 Sep 2021
 </time>
 </div>
 <div class=col-xs-6>
@@ -64,79 +62,100 @@ Hugo Installation If you are on a Mac, installation is very simple.">
 </div>
 </header>
 <div class="post-content markdown-body">
-<p>This blog is managed with a monolithic org file representing all posts and Hugo
-managing the generation of the HTML. Some people just manage their blogs using
-org directly but using Hugo as an intermediary makes some things like theming
-easier and allows me to continue to work in org for my blog. This post goes over
-the major moving parts.</p>
-<h2 id=hugo>Hugo</h2>
-<h3 id=installation>Installation</h3>
-<p>If you are on a Mac, installation is very simple. All it requires is a <code>brew install hugo</code>. On linux, your package manager may be of use but some distros
-like Ubuntu tend to offer fairly vintage versions. For that reason, it may be
-simpler to just download the static binary and put it somewhere in your path.
-You can verify Hugo is installed correctly with <code>hugo version</code></p>
-<h3 id=initial-site-generation>Initial Site Generation</h3>
-<p>Once Hugo is installed, you want to generate a skeleton site. In my case this
-was as simple as <code>hugo new site carlf.github.io -f yml</code>. This generates a new
-empty skeleton the <code>-f yml</code> tells the generator that I would like to use yaml
-for my config. Other options include json and toml. I&rsquo;m fairly comfortable with
-yaml so I went with that but they should be equivalent in practice.</p>
-<h3 id=initialize-go-dot-mod>Initialize go.mod</h3>
-<p>In older versions of Hugo, the common practice was to check out things like
-themes as submodules. This is not always ideal as submodules make initial
-checkout trickier and removing them is a hassle. See
-<a href=https://www.hugofordevelopers.com/articles/master-hugo-modules-managing-themes-as-modules/>here</a>
-for more details. To initialize your website as a module, run the following:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-shell data-lang=shell>hugo mod init github.com/carlf/carlf.github.io</code></pre></div>
-<h3 id=configure-hugo>Configure Hugo</h3>
-<p>Now we need to configure Hugo so we get some decent looking output. The major
-parts here are picking a theme and configuring it. I ended up writing my own
-called <a href=https://github.com/carlf/hugo-theme-olympus>olympus</a> There are many
-available. Take a look at <a href=https://themes.gohugo.io/>Hugo Themes</a> for more
-choices.</p>
-<p>My config ended up looking like this:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-yaml data-lang=yaml><span style=font-weight:700>baseURL</span>: https://carlf.io
-<span style=font-weight:700>languageCode</span>: en-us
-<span style=font-weight:700>title</span>: carlf.io
-<span style=font-weight:700>theme</span>: github.com/carlf/hugo-theme-olympus
-
-<span style=font-weight:700>markup</span>:
-  <span style=font-weight:700>highlight</span>:
-    <span style=font-weight:700>guessSyntax</span>: <span style=font-weight:700>true</span>
-    <span style=font-weight:700>style</span>: nord
-
-<span style=font-weight:700>params</span>:
-  <span style=font-weight:700>author</span>: Carl Flippin
-
-<span style=font-weight:700>menu</span>:
-  <span style=font-weight:700>main</span>:
-    - <span style=font-weight:700>identifier</span>: categories
-      <span style=font-weight:700>name</span>: Categories
-      <span style=font-weight:700>url</span>: /categories
-      <span style=font-weight:700>weight</span>: 2
-    - <span style=font-weight:700>identifier</span>: tags
-      <span style=font-weight:700>name</span>: Tags
-      <span style=font-weight:700>url</span>: /tags
-      <span style=font-weight:700>weight</span>: 3
-
-<span style=font-weight:700>module</span>:
-  <span style=font-weight:700>imports</span>:
-  - <span style=font-weight:700>path</span>: github.com/carlf/hugo-theme-olympus</code></pre></div>
-<p>Note that my theme is referenced by github URL rather than a simple name. This
-is enabled by the <code>hugo mod init</code> above.</p>
-<p>In the <a href=/posts/colophon_part_2/>next part</a> of this series, we will go over how to manage the posts
-themselves and how <code>ox-hugo</code> factors into all this.</p>
+<p>Once you are far down the path of using emacs and org-mode, it feels wasteful to
+learn a whole new scheme for generating text. As much as I love markdown, I
+would much rather put my muscle memory to use keeping my content in org-mode
+files. This thinking took me to the excellent org-mode extension <a href=https://ox-hugo.scripter.co/>ox-hugo</a>. This
+module allows you to keep your content in a monolithic org file and simply
+exports neatly to the markdown that hugo expects.</p>
+<h2 id=installation>Installation</h2>
+<p>Installing ox-hugo is pretty trivial. I am using <a href=https://github.com/hlissner/doom-emacs>Doom Emacs</a> so enabling ox-hugo
+is as simple as adding the following to your init.el:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-emacs-lisp data-lang=emacs-lisp>(doom! :lang
+       (org +hugo))</code></pre></div>
+<p>Run a doom sync and you will be good to go.</p>
+<p>If you are using a more vanilla emacs, you just need the following to load
+ox-hugo with <code>use-package</code>:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-emacs-lisp data-lang=emacs-lisp>(use-package ox-hugo
+  :ensure t
+  :after ox)</code></pre></div>
+<p>Note that this assumes you already have org mode installed. For more on that see
+<a href=https://orgmode.org/install.html>here</a>.</p>
+<h2 id=content>Content</h2>
+<p>The content is all stored in a monolithic org-mode document and is exported to
+markdown suitable for processing by hugo with a regular export command. There&rsquo;s
+a few things to note about the structure of this org-mode doc.</p>
+<p><em>Note that the raw org file can be seen <a href=https://raw.githubusercontent.com/carlf/carlf.github.io/main/posts.org>here</a>.</em></p>
+<p>First, the document starts with some key configuration.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-org data-lang=org><span style=font-style:italic>#+HUGO_BASE_DIR</span><span style=font-style:italic>: ~/repos/carlf.github.io</span>
+<span style=font-style:italic>#+HUGO_SECTION</span><span style=font-style:italic>: posts</span>
+<span style=font-style:italic>#+HUGO_CODE_FENCE</span><span style=font-style:italic>: nil</span></code></pre></div>
+<p>This configures ox-hugo by telling it where the markdown should be exported to,
+what secion the top-level headings should be exported to, and to use the
+highlight shortcode rather than the triple-backtick code fence. Since my blog is
+configured using the default code highlighter, I went with <code>nil</code> here but you
+could just as easily set it to <code>t</code>.</p>
+<p>Second, each post has some front matter that configures the metadata on export.
+Let&rsquo;s take a look at the beginning of this particular org doc.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-org data-lang=org><span style=font-weight:700>*</span><span style=font-weight:700> Hugo</span><span style=font-style:italic> :@hugo:</span>
+<span style=font-weight:700>**</span> Blogging with org-mode and hugo<span style=font-style:italic> :org:hugo:emacs:</span>
+<span style=font-style:italic>:PROPERTIES:
+</span><span style=font-style:italic></span><span style=font-style:italic>:EXPORT_FILE_NAME: blogging_with_org_and_hugo
+</span><span style=font-style:italic>:EXPORT_DATE: 2021-09-14
+</span><span style=font-style:italic>:ID:       40dc81ff-8c52-482b-a2f0-7e1d1f4f583d
+</span><span style=font-style:italic></span><span style=font-style:italic>:END:</span></code></pre></div>
+<p>The top level heading sets the category of the posts under it. In this case, the
+category is hugo. The tag on the heading is what sets the category. Next we have
+the second level heading which sets the name of the post and the tags associated
+with it. In this case I am setting the tags org, hugo, and emacs. Then the
+properties set the file name of the exported markdown and the publish date. The
+ID field is particularly useful for linking between pages. If you make a link to
+an ID in your org document, that is automatically translated to a link the
+appropriate exported page by ox-hugo.</p>
+<h2 id=export>Export</h2>
+<p>Once you have your post ready to go, you still need to export to markdown so
+hugo can process your posts. I usually do this while running <code>hugo serve</code> so I
+can look at my exported posts as I work. To export with ox-hugo, you can go to
+the export dispatch menu. In doom emacs this is via <code>SPC m e</code>. In regular emacs,
+this would be via <code>C-c C-e</code>. In either case you will hit <code>H A</code> to export all
+posts from your file.</p>
+<p>Let&rsquo;s take a look a the header of the file generated by this post.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-text data-lang=text>+++
+title = &#34;Blogging with org-mode and hugo&#34;
+author = [&#34;Carl Flippin&#34;]
+date = 2021-09-14
+tags = [&#34;org&#34;, &#34;hugo&#34;, &#34;emacs&#34;]
+categories = [&#34;hugo&#34;]
+draft = false
++++
+</code></pre></div><p>As you can see, all the frontmatter you would expect from the discussion above
+is there. One note on the draft status. If the top level heading for a post is a
+<code>TODO</code> ox-hugo will mark it as a draft. If it has no status or the status is
+done, it will be posted with draft set to false.</p>
+<h2 id=hosting>Hosting</h2>
+<p>After you export, you are ready to host your site. If you want to do it
+manually, you just need to run hugo to generate your HTML and put it on your web
+server. For a simpler, hosting experience, you probably want to check out Github
+Actions and Github Pages or maybe a service like Netlify to make the build and
+deploy process more automatic. For this blog, I am using Github Actions and
+Github Pages with a dash of Cloudflare as a CDN but that is the subject of
+another post.</p>
 </div>
 <div class="row middle-xs">
 <div class=col-xs-12>
 <div class=post-tags>
-<a href=/tags/meta/>
-meta
+<a href=/tags/org/>
+org
 </a>
 </div>
 <div class=post-tags>
 <a href=/tags/hugo/>
 hugo
+</a>
+</div>
+<div class=post-tags>
+<a href=/tags/emacs/>
+emacs
 </a>
 </div>
 </div>
