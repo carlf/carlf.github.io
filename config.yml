@@ -26,6 +26,7 @@ params:
       link: https://www.linkedin.com/in/carlflippin/
     - name: RSS
       link: /index.xml
+  extraCSSFiles: ["css/extra.css"]
 
 menu:
   main:

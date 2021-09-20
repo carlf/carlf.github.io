@@ -1,0 +1,14 @@
+.post-header a:hover, .post-content a:hover, .header-items a:hover {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    font-weight: normal;
+}
+
+.post-author a:hover {
+    font-weight: 600;
+}
+
+.post-header a, .post-content a, .header-items a {
+    text-decoration: underline;
+}
